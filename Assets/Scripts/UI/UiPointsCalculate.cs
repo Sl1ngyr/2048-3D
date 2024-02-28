@@ -20,9 +20,8 @@ namespace UI
         public void CalculatePoints(int points)
         {
             TotalScoreOnScreen += (int)(points / DIVISION_VALUE);
-            var result = _scoreText + TotalScoreOnScreen;
             
-            _text.text = result;
+            _text.text = _scoreText + TotalScoreOnScreen;
         }
     }
 }

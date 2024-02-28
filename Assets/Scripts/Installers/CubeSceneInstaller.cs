@@ -18,8 +18,8 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<CubeFactory>().AsSingle();
-            Container.BindFactory<CubeComponent, CubeComponent.Factory>().FromComponentInNewPrefab(_prefab);
             Container.Bind<CubeSpawner>().FromInstance(_cubeSpawner).AsSingle();
+            Container.BindFactory<CubeComponent, CubeComponent.Factory>().FromComponentInNewPrefab(_prefab);
             Container.Bind<UiPointsCalculate>().FromInstance(_uiPointsCalculate);
             Container.Bind<UiCompletionGame>().FromInstance(_uiCompletionGame);
             Container.Bind<MotionHandler>().FromInstance(_motionHandler);
